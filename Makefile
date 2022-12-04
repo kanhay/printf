@@ -6,7 +6,7 @@
 #    By: khanhayf <khanhayf@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 13:51:01 by khanhayf          #+#    #+#              #
-#    Updated: 2022/12/03 14:50:43 by khanhayf         ###   ########.fr        #
+#    Updated: 2022/12/04 16:48:36 by khanhayf         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
-SRC = ft_printf.c ft_printf_fun.c ft_libft_fun.c
-OBJ = ft_printf.o ft_printf_fun.o ft_libft_fun.o
+SRC = ft_printf.c ft_printf_fun.c
+OBJ = ft_printf.o ft_printf_fun.o
 
 all : $(NAME)
 

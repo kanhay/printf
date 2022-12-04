@@ -6,11 +6,16 @@
 /*   By: khanhayf <khanhayf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 12:10:15 by khanhayf          #+#    #+#             */
-/*   Updated: 2022/12/03 15:17:46 by khanhayf         ###   ########.fr       */
+/*   Updated: 2022/12/04 16:49:19 by khanhayf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	ft_putchar(char c)
+{
+	g_l += write (1, &c, 1);
+}
 
 static void	check_arg(va_list argptr, char c)
 {
@@ -19,11 +24,11 @@ static void	check_arg(va_list argptr, char c)
 	else if (c == '%')
 		ft_putchar('%');
 	else if (c == 'd' || c == 'i')
-		ft_itoa(va_arg(argptr, int));
+		ft_putnbr(va_arg(argptr, int));
 	else if (c == 's')
 		ft_putstr(va_arg(argptr, char *));
 	else if (c == 'u')
-		ft_putnbr(va_arg(argptr, unsigned int));
+		ft_putpnbr(va_arg(argptr, unsigned int));
 	else if (c == 'x')
 		ft_tohexdec(va_arg(argptr, unsigned int), "0123456789abcdef");
 	else if (c == 'X')
